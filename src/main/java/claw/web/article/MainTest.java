@@ -1,5 +1,7 @@
 package claw.web.article;
 
+import claw.web.article.article.Article;
+
 public class MainTest {
 
     public static void main(String[] args) {

@@ -12,11 +12,10 @@ public class MainTestGetSource {
 
         Html html = new Html();
         Document doc = html.getDocument(homelink);
+        List<String> list2 = Entry.getListSourceRecursive(doc,css);
+        list2.forEach(System.out::println);
 
-        Entry entry = new Entry();
-        List<String> list2 = entry.getListSource(doc,css);
-
-        list2.forEach(e -> System.out.println(e));
+        System.out.println("list2.size() = " + list2.size());
 
 
     }

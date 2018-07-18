@@ -12,11 +12,6 @@ get html from many type of connect
 public class Html {
     public static final String METHOD_POST = "post";
     public static final String METHOD_GET = "get";
-//    private String url;
-//    private String userAgent;
-//    private HashMap<String, String> cookies;
-//    private int timeout;
-//    private String method;
 
     /*
       Document doc = Jsoup.connect("http://example.com")
@@ -27,15 +22,15 @@ public class Html {
       .post();
      */
 
-    public Document getDocument(String url){
+    public static Document getDocument(String url){
         return getDocument(url, null, null, 0, null);
     }
 
-    public Document getDocument(String url, int timeout){
+    public static Document getDocument(String url, int timeout){
         return getDocument(url, null, null, timeout, null);
     }
 
-    public Document getDocument(String url, String userAgent, HashMap cookies, int timeout, String method) {
+    public static Document getDocument(String url, String userAgent, HashMap cookies, int timeout, String method) {
         Document document = null;
 
         if (url != null) {
@@ -54,7 +49,7 @@ public class Html {
             }
 
             try {
-                if (method == null || method.equals(METHOD_GET)) {
+                if (method == null || method.compareToIgnoreCase(METHOD_GET) == 0) {
                     document = connection.get();
                 } else {
                     document = connection.post();

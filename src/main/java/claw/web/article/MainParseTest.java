@@ -1,5 +1,7 @@
 package claw.web.article;
 
+import claw.web.article.article.ParseArticle;
+
 public class MainParseTest {
     public static void main(String[] args) {
         String homelink= "http://triethoc.edu.vn/vi/chuyen-de-triet-hoc/triet-hoc-nhan-hoc/";
@@ -8,11 +10,11 @@ public class MainParseTest {
         String cssURL = "#ctl00_Default1__Body > div > div.page-wrapper > div > div.content-list > ul > li:nth-child(1) > div > a";
         String cssDate="#ctl00_Default1__Body > div > div.page-wrapper > div > div.content-list > ul > li:nth-child(1) > div > span";
         String cssSapo="#ctl00_Default1__Body > div > div.page-wrapper > div > div.content-list > ul > li:nth-child(1) > div > p";
-        Parse article = new Parse();
-        article.setUrlCssQuery(cssURL);
-        article.setDateCSSQuery(cssDate);
-        article.setSapoCSSQuery(cssSapo);
-        article.setThumbnailURLCSSQuery(cssThumbnail);
+//        ParseArticle article = new ParseArticle();
+//        article.setUrlCssQuery(cssURL);
+//        article.setDateCSSQuery(cssDate);
+//        article.setSapoCSSQuery(cssSapo);
+//        article.setThumbnailURLCSSQuery(cssThumbnail);
 
     }
 }
